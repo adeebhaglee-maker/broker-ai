@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broker AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #070b0a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .green {
+      color: #35e887;
+    }
+
+    p {
+      color: #a8b0ad;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .card {
+      background: #101714;
+      border: 1px solid #23352d;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: left;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: 1px solid #31483e;
+      background: #090e0c;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 17px;
+      border: none;
+      border-radius: 12px;
+      background: #35e887;
+      color: #041009;
+      font-weight: bold;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 20px;
+      text-align: center;
+      color: #35e887;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">🏠</div>
+
+  <h1>Broker <span class="green">AI</span></h1>
+
+  <p>
+    Your intelligent real-estate assistant.<br>
+    Find the right property faster with AI.
+  </p>
+
+  <div class="card">
+
+    <h2>Find a Property</h2>
+
+    <input
+      type="text"
+      placeholder="City or area"
+    >
+
+    <select>
+      <option>Buy</option>
+      <option>Rent</option>
+    </select>
+
+    <input
+      type="number"
+      placeholder="Maximum budget"
+    >
+
+    <button onclick="searchProperty()">
+      Ask Broker AI ✨
+    </button>
+
+    <div class="status" id="status">
+      AI Broker Online ●
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function searchProperty() {
+  document.getElementById("status").innerHTML =
+    "🔍
